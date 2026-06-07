@@ -1,0 +1,25 @@
+# エディターの補完を設定スキーマに合わせて取得
+"$schema" = 'https://starship.rs/config-schema.json'
+
+
+# すべて出すときは$all
+format = '🐠 $all$line_break$directory$character'
+
+# シェルのプロンプトの間に空行を挿入する
+add_newline = true
+
+[directory]
+home_symbol = '$HOME'
+truncation_length = 0
+truncate_to_repo = false
+
+[shell]
+style = 'cyan bold'
+disabled = false
+
+[status]
+disabled = false
+
+# package モジュールを無効化してプロンプトから完全に非表示にする
+[package]
+disabled = true
