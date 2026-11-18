@@ -1,6 +1,12 @@
 # 適用: mise trust && mise dot apply --dry-run && mise dot apply
 # variants の無いエントリは Windows でも同じパスに置く想定
 
+[tasks.update]
+description = "pull して dotfiles を適用する"
+dir = "{{config_root}}"
+# 手元に未 push の変更があるときに、勝手にマージコミットを作らない
+run = ["git pull --ff-only", "mise dot apply"]
+
 [dotfiles]
 "~/.config/starship.toml" = { source = "home/.config/starship.toml" }
 "~/.config/git/ignore" = { source = "home/.config/git/ignore" }
