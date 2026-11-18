@@ -1,0 +1,9 @@
+[user]
+	name = ik2m
+	email = 39111330+ik2m@users.noreply.github.com
+[core]
+	autocrlf = input
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"

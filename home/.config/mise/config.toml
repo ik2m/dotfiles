@@ -1,0 +1,9 @@
+[tools]
+node = "24"
+uv = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["node"]
+
+[settings.tool_update]
+global_auto = true

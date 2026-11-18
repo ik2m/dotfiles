@@ -1,0 +1,25 @@
+# 適用: mise trust && mise dot apply --dry-run && mise dot apply
+# variants の無いエントリは Windows でも同じパスに置く想定
+
+[dotfiles]
+"~/.config/starship.toml" = { source = "home/.config/starship.toml" }
+"~/.config/git/ignore" = { source = "home/.config/git/ignore" }
+"~/.config/mise/config.toml" = { source = "home/.config/mise/config.toml" }
+"~/.gitconfig" = { source = "home/.gitconfig" }
+
+[dotfiles."~/.zshrc"]
+source = "home/.zshrc"
+variants = [{ os = "linux" }]
+
+# Windows 側の Claude Code は WSL のものとは別に設定するので linux のみ
+[dotfiles."~/.claude/CLAUDE.md"]
+source = "home/.claude/CLAUDE.md"
+variants = [{ os = "linux" }]
+
+[dotfiles."~/.claude/settings.json"]
+source = "home/.claude/settings.json"
+variants = [{ os = "linux" }]
+
+[dotfiles."~/.claude/statusline-command.sh"]
+source = "home/.claude/statusline-command.sh"
+variants = [{ os = "linux" }]
