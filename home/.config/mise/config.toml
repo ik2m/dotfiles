@@ -2,8 +2,7 @@
 node = "24"
 pnpm = "latest"
 uv = "latest"
-# Windows は mise activate していないので、mise 管理外で入れたものを使う
-starship = { version = "latest", os = ["linux"] }
+starship = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
