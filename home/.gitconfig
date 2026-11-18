@@ -3,6 +3,8 @@
 	email = 39111330+ik2m@users.noreply.github.com
 [core]
 	autocrlf = input
+[push]
+	autoSetupRemote = true
 # webstorm は JetBrains Toolbox の生成スクリプト（Windows / WSL 両対応）で起動する
 [merge]
 	tool = webstorm
