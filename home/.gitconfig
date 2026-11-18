@@ -3,7 +3,18 @@
 	email = 39111330+ik2m@users.noreply.github.com
 [core]
 	autocrlf = input
+# webstorm は JetBrains Toolbox の生成スクリプト（Windows / WSL 両対応）で起動する
+[merge]
+	tool = webstorm
+[mergetool "webstorm"]
+	cmd = webstorm merge \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
 [diff]
-	tool = vscode
+	tool = webstorm
+[difftool "webstorm"]
+	cmd = webstorm diff \"$LOCAL\" \"$REMOTE\"
 [difftool "vscode"]
 	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
+# OS 固有の設定（Windows の sshCommand など）は管理外のファイルに置く。無ければ無視される
+[include]
+	path = ~/.gitconfig.local
