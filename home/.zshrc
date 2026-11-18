@@ -4,7 +4,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 eval "$(mise activate zsh)"
 
-# dotfiles の置き場所はマシンごとに違う（ghq はマシンによって無い）ので、
+# dotfiles の置き場所はマシンごとに違うので、
 # ~/.zshrc のシンボリックリンクの先からリポジトリを引く
 dotup() {
   local repo=${${:-$HOME/.zshrc}:A:h:h}
