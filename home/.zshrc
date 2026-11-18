@@ -1,13 +1,5 @@
 [ -x ~/wsl2-ssh-agent ] && eval $(~/wsl2-ssh-agent)
 
-# pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 export PATH="$HOME/.local/bin:$PATH"
 
 eval "$(mise activate zsh)"
