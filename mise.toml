@@ -11,11 +11,10 @@
 source = "home/.zshrc"
 variants = [{ os = "linux" }]
 
-# Windows 側の Claude Code は WSL のものとは別に設定するので linux のみ
 [dotfiles."~/.claude/CLAUDE.md"]
 source = "home/.claude/CLAUDE.md"
-variants = [{ os = "linux" }]
 
+# settings.json と statusline は bash 前提・環境ごとに変えたいので linux のみ
 [dotfiles."~/.claude/settings.json"]
 source = "home/.claude/settings.json"
 variants = [{ os = "linux" }]

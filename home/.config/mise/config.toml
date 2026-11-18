@@ -2,9 +2,12 @@
 node = "24"
 pnpm = "latest"
 uv = "latest"
+pnpm = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
+# Windows でもコピーではなくシンボリックリンクで配置する（要 開発者モード）
+dotfiles.windows_symlinks = true
 
 [settings.tool_update]
 global_auto = true
