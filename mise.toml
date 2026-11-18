@@ -17,6 +17,10 @@ run = ["git pull --ff-only", "mise dot apply"]
 source = "home/.zshrc"
 variants = [{ os = "linux" }]
 
+[dotfiles."~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"]
+source = "home/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
+variants = [{ os = "windows" }]
+
 [dotfiles."~/.claude/CLAUDE.md"]
 source = "home/.claude/CLAUDE.md"
 
