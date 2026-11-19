@@ -8,10 +8,14 @@ dir = "{{config_root}}"
 run = ["git pull --ff-only", "mise dot apply"]
 
 [dotfiles]
-"~/.config/starship.toml" = { source = "home/.config/starship.toml" }
 "~/.config/git/ignore" = { source = "home/.config/git/ignore" }
 "~/.config/mise/config.toml" = { source = "home/.config/mise/config.toml" }
 "~/.gitconfig" = { source = "home/.gitconfig" }
+
+# Windows と WSL でホームの表記を変えるため template で描画する
+[dotfiles."~/.config/starship.toml"]
+source = "home/.config/starship.toml"
+mode = "template"
 
 [dotfiles."~/.zshrc"]
 source = "home/.zshrc"
