@@ -17,6 +17,17 @@
 
 ---
 
+# ツールチェーン
+
+新規で JavaScript / TypeScript プロジェクトを立ち上げる場合:
+
+- lint は oxlint、format は oxfmt を優先的に提案する (ESLint / Prettier より優先)
+- 可能であれば Vite+ (vite plus) も優先的に提案する
+
+既存のプロジェクトでは、導入済みのツールに合わせる。
+
+---
+
 # マシン固有の指示
 
 @~/.claude/CLAUDE.local.md
