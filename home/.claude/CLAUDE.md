@@ -28,6 +28,13 @@
 
 ---
 
+# Chrome DevTools MCP
+
+WSL では、chrome-devtools MCP を使う前に `start-chrome-debug` を実行して Windows 側の
+Chrome をリモートデバッグ付きで起動しておく。起動していないと MCP が接続できない。
+
+---
+
 # マシン固有の指示
 
 @~/.claude/CLAUDE.local.md
