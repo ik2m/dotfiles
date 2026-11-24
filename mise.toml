@@ -36,3 +36,8 @@ variants = [{ os = "linux" }]
 [dotfiles."~/.claude/statusline-command.sh"]
 source = "home/.claude/statusline-command.sh"
 variants = [{ os = "linux" }]
+
+# WSL から Windows 側の Chrome を起動する (chrome-devtools MCP 用) ので linux のみ
+[dotfiles."~/.local/bin/start-chrome-debug"]
+source = "home/.local/bin/start-chrome-debug"
+variants = [{ os = "linux" }]
