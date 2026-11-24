@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+chrome=${1:-/mnt/c/Program Files/Google/Chrome/Application/chrome.exe}
+port=${2:-9222}
+# user-data-dir を通常プロファイルと分けないと remote-debugging-port が無視される
+"$chrome" --remote-debugging-port="$port" --user-data-dir='C:\temp\chrome-debug' \
+  --no-first-run --no-default-browser-check >/dev/null 2>&1 &
+sleep 2
+curl -s "http://127.0.0.1:$port/json/version"
